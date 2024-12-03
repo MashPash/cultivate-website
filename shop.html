@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Cultivate</title>
+
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Shop Our Plants</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="quiz.html">Plant Personality Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html" style="float: right;">Login</a>
+    </nav>
+
+    <!-- Sidebar for smaller screens -->
+    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" onclick="closeSidebar()">Close &times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!--Javascript in future for sidebar responsiveness-->
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").classList.add("sidebar-active");
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").classList.remove("sidebar-active");
+        }
+    </script>
+
+    <!--NavBar section End-->
+
+    <!--Search Bar Section-->
+    <div class="search-container">
+        <form action="#">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
+    <!--SHOP HTML-->
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <label for="category-filter">Filter by category:</label>
+        <select id="category-filter" name="category-filter" onchange="filterCategory()">
+            <option value="all">All</option>
+            <option value="outdoor">Outdoor Plants</option>
+            <option value="indoor">Indoor Plants</option>
+            <option value="succulents">Succulents</option>
+            <option value="fruit">Fruit Trees & Bushes</option>
+            <option value="indigenous">Indigenous Plants</option>
+            <option value="herbs">Herb Plants</option>
+            <option value="vegetable">Vegetable Plants</option>
+            <option value="pots">Garden Pots</option>
+            <option value="shed">Garden Shed Must Haves</option>
+        </select>
+    </div>
+
+    <script>
+        function filterCategory() {
+            const filterValue = document.getElementById('category-filter').value;
+            const categories = document.querySelectorAll('.category');
+
+            categories.forEach(category => {
+                if (filterValue === 'all') {
+                    category.style.display = 'block';
+                } else if (category.getAttribute('data-category') === filterValue) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        }
+
+    </script>
+
+    <!-- Shop Section -->
+    <div class="shop-section">
+
+        <!-- Categories -->
+        <section class="shop-category">
+            <h2 id="outdoor-plants" data-category="outdoor">Outdoor Plants</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3 id="snakeplant">Snake Plant</h3>
+                    <img src="images/outdoor1.png" alt="Outdoor Plant 1">
+                    <button class="buy-now-btn" productData="Plant 1">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Easter Cactus</h3>
+                    <img src="images/outdoor2.jpg" alt="Outdoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Gayfeather</h3>
+                    <img src="images/outdoor3.jpg" alt="Outdoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="bambooplant">Bamboo Plant</h3>
+                    <img src="images/bamboo.png" alt="Outdoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="fern">Ferns</h3>
+                    <img src="images/fern1.jpg" alt="Outdoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more plant items as needed -->
+            </div>
+            <br>
+            <h2 id="indoor-plants" data-category="indoor">Indoor Plants</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3>Maranta</h3>
+                    <img src="images/indoor1.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Fiddle Leaf Fig</h3>
+                    <img src="images/indoor2.jpg" alt="Indoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="orchid">Orchids</h3>
+                    <img src="images/orchid.png" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="aloe">Zebra Plant</h3>
+                    <img src="images/aloe1.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="monstera">Ivy Plant</h3>
+                    <img src="images/indoor5.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more plant items as needed -->
+            </div>
+
+            <!-- Add more categories (succulents, fruit trees, indigenous plants, etc.) -->
+            <br>
+            <h2 id="fruit-plants" data-category="fruit">Fruit Trees And Bushes</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3>Apple Tree Plant</h3>
+                    <img src="images/fruit1.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Pear Tree Plant</h3>
+                    <img src="images/fruit2.jpeg" alt="Indoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Blueberry bush</h3>
+                    <img src="images/fruit3.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Lemon Tree Plant</h3>
+                    <img src="images/fruit4.png" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Rasperry Bush</h3>
+                    <img src="images/fruit5.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more plant items as needed -->
+            </div>
+            <br>
+            <h2 id="succulent-plants" data-category="succulents">Succulents</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3>Tormentosa</h3>
+                    <img src="images/succu1.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>White Rose</h3>
+                    <img src="images/succu2.jpg" alt="Indoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3 id="cactus">Mini Cactus</h3>
+                    <img src="images/succu3.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Pencil Cactus</h3>
+                    <img src="images/40.png" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Yucca</h3>
+                    <img src="images/47.png" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more plant items as needed -->
+            </div>
+            <br>
+            <h2 id="herb-plants" data-category="herbs">Herb Plants</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3>Lavender Herb</h3>
+                    <img src="images/herb1.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Thyme Herb</h3>
+                    <img src="images/herb2.jpg" alt="Indoor Plant 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Coriander Herb</h3>
+                    <img src="images/herb3.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Chives Herb</h3>
+                    <img src="images/herb3.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Peppermint Herb</h3>
+                    <img src="images/herb4.jpg" alt="Indoor Plant 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more plant items as needed -->
+            </div>
+            <br>
+
+            <h2 id="garden-shed" data-category="shed">Garden Shed Must Haves</h2>
+            <div class="plant-category">
+                <div class="plant-item">
+                    <h3>Gardening Tools Set</h3>
+                    <img src="images/tools1.jpg" alt="Garden Tool 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Lawn Fertilizer</h3>
+                    <img src="images/tools2.jpg" alt="Garden Tool 2">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Organic Fertilizer</h3>
+                    <img src="images/tools3.jpg" alt="Garden Tool 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Snail Bait</h3>
+                    <img src="images/tools4.jpg" alt="Garden Tool 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="plant-item">
+                    <h3>Organic insecticide</h3>
+                    <img src="images/tools5.jpg" alt="Garden Tool 1">
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <!-- Add more garden shed must-have items -->
+            </div>
+        </section>
+
+
+
+
+        <script>
+            function filterCategory() {
+                const filterValue = document.getElementById('category-filter').value;
+                const categories = document.querySelectorAll('.category');
+
+                categories.forEach(category => {
+                    if (filterValue === 'all') {
+                        category.style.display = 'block';
+                    } else if (category.getAttribute('data-category') === filterValue) {
+                        category.style.display = 'block';
+                    } else {
+                        category.style.display = 'none';
+                    }
+                });
+            }
+
+        </script>
+
+
+
+
+        <button id="scrollToTopBtn" style="display: none;">Scroll to Top</button>
+
+
+        <!-- footer section start -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <a href="home.html"><img src="images/logo.jpg" alt="logo" class="logo-footer"></a>
+                    <div class="footer-about">
+                        <p>Company was established in 2024,
+                            we are determined in providing the best possible for our customers</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="useful-link">
+                        <h2>Useful Links</h2>
+
+                        <ul class="use-links">
+                            <li><a href="home.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                            <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="social-links">
+                        <h2>Follow Us</h2>
+
+                        <ul class="social-icons">
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href=""><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="address">
+                        <h2>Address</h2>
+
+                        <ul class="address-links">
+                            <li class="address1"><i class="fa-solid fa-location-dot"></i> Komga, Amathole district, 4950
+                            </li>
+                            <li><a href="047 569 1226"><i class="fa-solid fa-phone"></i> 047 569 1226</a></li>
+                            <li><a href="mailto: cultivate@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                    cultivate@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer section end -->
+
+        <!-- footer copy right section start -->
+
+        <div class="copyright">
+            <p>&copy; 2024 Cultivate. All rights reserved.</p>
+        </div>
+
+
+        <!-- footer copy right section end -->
+        <script src="js/shop.js"></script>
+</body>
+
+</html>

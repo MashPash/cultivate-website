@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/home.js"></script>
+    <title>Cultivate - Home</title>
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <button class="fa fa-info-circle" style="float: right; margin-right: 50px;" onclick="getBrowserInfo()"
+            alt="Get Browser Info"></button>
+
+
+
+        <div class="grid_12">
+            <h1>
+                <a href="home.html">
+                    <img src="images/logo.jpg" alt="Cultivate logo" height="100px" width="100px" style="float:left">
+                </a>
+            </h1>
+
+        </div>
+
+
+
+        <h1>Welcome to Cultivate</h1>
+        <p>Your online plant store</p>
+
+
+
+    </header>
+
+
+
+    <!--NavBar section begin-->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <!-- Shop dropdown -->
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Shop</a>
+            <div class="dropdown-content" id="shopDropdown">
+                <a href="shop.html">All Plants</a>
+                <a href="shop.html#outdoor-plants">Outdoor Plants</a>
+                <a href="shop.html#indoor-plants">Indoor Plants</a>
+                <a href="shop.html#succulent-plants">Succulents</a>
+                <a href="shop.html#fruit-plants">Fruit Trees & Bushes</a>
+                <a href="shop.html#indigenous-plants">Indigenous Plants</a>
+                <a href="shop.html#herb-plants">Herb Plants</a>
+                <a href="shop.html#vegetable-plants">Vegetable Plants</a>
+                <a href="shop.html#garden-pots">Garden Pots</a>
+                <a href="shop.html#garden-shed">Garden Shed Must-Haves</a>
+            </div>
+        </div>
+
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html" style="margin-left: 50px;">Login</a>
+        <a href="php/profile.php" style="margin-left:55px;">Profile</a>
+        <a href="php/cart.php" style="margin-left: 60px;" class="fa fa-shopping-cart"></a>
+    </nav>
+
+
+    <div class="carousel-container">
+        <div class="slide">
+            <img src="images/Flower Garden Wallpaper.jpg" alt="Image 1" class="slides">
+            <div class="text-overlay">Grow Your Garden To Better Heights With Us</div>
+        </div>
+        <div class="slide">
+            <img src="images/Spring Flower Garden Wallpaper.jpg" alt="Image 2" class="slides">
+            <div class="text-overlay">Give Your Home A Brighter Look</div>
+        </div>
+        <div class="slide">
+            <img src="images/Spring Flowers Gardening Wallpaper.jpg" alt="Image 3" class="slides">
+            <div class="text-overlay">Start Your Plant Personality Journey</div>
+        </div>
+    </div>
+
+    <!-- Sidebar for smaller screens -->
+    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" onclick="closeSidebar()">Close &times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <!-- Dropdown for Shop -->
+        <a href="javascript:void(0)" onclick="toggleShopDropdown()">Shop</a>
+        <div id="sidebar_shopDropdown" class="sidebar-dropdown-content">
+            <!-- Links to sections in shop.html -->
+            <a href="shop.html">All Plants</a>
+            <a href="shop.html#outdoor-plants">Outdoor Plants</a>
+            <a href="shop.html#indoor-plants">Indoor Plants</a>
+            <a href="shop.html#succulents">Succulents</a>
+            <a href="shop.html#fruit-trees">Fruit Trees & Bushes</a>
+            <a href="shop.html#indigenous-plants">Indigenous Plants</a>
+            <a href="shop.html#water-plants">Water/Pond Plants</a>
+            <a href="shop.html#vegetable-plants">Vegetable Plants</a>
+            <a href="shop.html#garden-pots">Garden Pots</a>
+            <a href="shop.html#garden-shed">Garden Shed Must-Haves</a>
+        </div>
+        <a href="quiz.html">Plant Personality Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html">Login</a>
+    </div>
+
+
+    <!--NavBar section End-->
+
+
+
+    <!--Search Bar Section-->
+    <div class="search-container">
+        <form id="search-form" action="search.html" method="get" onsubmit="return false;">
+            <input type="text" id="search-input" placeholder="Search by plant category or plant..." name="search">
+            <button type="button" onclick="redirectToSearch()"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <script>
+        // Function to redirect to search.html with query parameters
+        function redirectToSearch() {
+            const query = document.getElementById('search-input').value;
+
+
+            // Redirect to search.html with query parameters
+            const url = `search.html?query=${encodeURIComponent(query)}`;
+            window.location.href = url;
+        }
+    </script>
+
+
+
+    <!--About Cultivate start-->
+
+    <section class="about-us-area">
+        <div class="about-div">
+            <div class="about-content">
+                <!-- About Content -->
+                <div class="about-content-two">
+                    <h2>About Cultivate</h2>
+                    <p>We offer a wide variety of plants to brighten up your home. Whether you're a seasoned gardener or
+                        just
+                        starting out, we have something for everyone. Explore our shop to find the perfect plant for
+                        you, or take
+                        our Plant Personality Quiz to discover your perfect match!</p>
+                </div>
+
+                <!-- Benefits Area -->
+                <div class="benefits-area">
+                    <div class="benefits-list">
+                        <img id="benefits-img" src="images/b1.png" alt="Quality Products">
+                        <h5>Quality Products</h5>
+                        <p>Our products are grown from sophisticated seeds which have been thoroughly researched by
+                            our experts. Plants are grown with care and love.</p>
+                    </div>
+
+                    <div class="benefits-list">
+                        <img id="benefits-img" src="images/b2.png" alt="Perfect Service">
+                        <h5>Perfect Service</h5>
+                        <p>We provide a smooth process to acquiring whatever plant one may desire and also follow up
+                            with dedicated customer service to ensure the ultimate growth of your plants.</p>
+                    </div>
+
+                    <div class="benefits-list">
+                        <img id="benefits-img" src="images/b3.png" alt="100% Natural">
+                        <h5>100% Natural</h5>
+                        <p>All our plants are grown with the best possible care without the use of pesticides and
+                            insecticides,
+                            ensuring a healthy and natural plant for you.</p>
+                    </div>
+
+                    <div class="benefits-list">
+
+                        <img id="benefits-img" src="images/b4.png" alt="Environmentally Friendly">
+                        <h5>Environmentally Friendly</h5>
+                        <p>Plants are grown in a natural environment and we sell plants that do not cause harm to the
+                            environment,
+                            ensuring a sustainable future.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider Line -->
+            <div class="divider-line"></div>
+        </div>
+    </section>
+    <!-- ##### About Area End ##### -->
+
+
+    <!-- ##### Service Area Start ##### -->
+    <section class="our-services-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>OUR SERVICES</h2>
+                    <p>We provide the perfect service for you.</p>
+                </div>
+            </div>
+
+            <div class="row-2">
+                <!-- Service Content Column -->
+                <div class="service-content">
+                    <h5>Plants Care</h5>
+                    <p>We provide services for good plant care.</p>
+
+                    <h5>Soil Testing</h5>
+                    <p>We can have your soil tested to ensure your plants can withstand most weather conditions.</p>
+
+                    <h5>Tree Service & Trimming</h5>
+                    <p>We provide services for tree trimming and a monthly standard garden checkup at a fee.</p>
+                </div>
+
+                <!-- Picture Column (Now in row-2) -->
+                <div class="service-image">
+                    <div class="video-container">
+                        <a href="https://youtu.be/B0DrWAUsNSc?si=UjzuGnrBpBWt1xtq" target="_blank">
+                            <img src="images/gardening-concept-with-female-hands.jpg" alt="Service Image">
+                            <i class="fa fa-pause-circle"></i>
+                            <p>Click image to get more info on our services</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Service Area End ##### -->
+
+
+
+
+    <!--Gardening Info-->
+    <div class="gardInfo">
+        <h1>Gardening Information</h1>
+
+        <p>Learn more about different categories of plants and how to care for them</p>
+
+
+        <h2>Indoor Plants</h2>
+        <p>Indoor plants are perfect for adding a touch of greenery to your home. They thrive in controlled indoor
+            environments and can improve air quality. Popular indoor plants include:</p>
+        <ul class="list">
+            <li>Snake Plants</li>
+            <li>Spider Plants</li>
+            <li>Pothos</li>
+        </ul>
+
+
+
+        <h2>Outdoor Plants</h2>
+        <p>Outdoor plants require more sunlight and space to grow. Here are some tips for successful outdoor
+            gardening:</p>
+        <ol class="list">
+            <li>Choose the right location with adequate sunlight.</li>
+            <li>Prepare the soil with compost and organic matter.</li>
+            <li>Water plants early in the morning.</li>
+        </ol>
+
+    </div>
+
+
+    <!-- footer section start -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="home.html"><img src="images/logo.jpg" alt="logo" class="logo-footer"></a>
+                <div class="footer-about">
+                    <p>Company was established in 2024,
+                        we are determined in providing the best possible for our customers</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="useful-link">
+                    <h2>Useful Links</h2>
+
+                    <ul class="use-links">
+                        <li><a href="home.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="social-links">
+                    <h2>Follow Us</h2>
+
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="address">
+                    <h2>Address</h2>
+
+                    <ul class="address-links">
+                        <li class="address1"><i class="fa-solid fa-location-dot"></i> Komga, Amathole district, 4950
+                        </li>
+                        <li><a href="047 569 1226"><i class="fa-solid fa-phone"></i> 047 569 1226</a></li>
+                        <li><a href="mailto: cultivate@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                cultivate@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- footer copy right section start -->
+
+    <div class="copyright">
+        <p>&copy; 2024 Cultivate. All rights reserved.</p>
+    </div>
+
+
+    <!-- footer copy right section end -->
+
+
+</body>
+
+</html>

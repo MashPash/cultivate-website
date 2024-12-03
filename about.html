@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ABOUT US</h1>
+        <p>Learn more about the amazing team behind CSCultivate.</p>
+    </header>
+
+    <nav>
+
+        <a href="home.html">Home</a>
+
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="shop.html">Shop</a>
+        <a href="quiz.html">Plant Personality Quiz</a>
+
+    </nav>
+
+    <!-- Sidebar for smaller screens -->
+    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" onclick="closeSidebar()">Close &times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="shop.html">Shop</a>
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!--Javascript in future for sidebar responsiveness-->
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").classList.add("sidebar-active");
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").classList.remove("sidebar-active");
+        }
+    </script>
+
+    <!--NavBar section End-->
+
+
+
+
+    <main>
+        <section id="team">
+            <article>
+                <h2>Ashleigh Mapuranga</h2>
+                <p>Founder of the organisation.<br />
+                    Keeps this place running</p>
+                <img src="images/ashleigh.jpg" alt="Member 1 Photo">
+
+
+            </article>
+
+            <article>
+                <h2>Katlego Magabane</h2>
+                <p>Marketing Manager.<br />
+                    Handles in person interaction with clients</p>
+                <img src="images/kvt2.jpg" alt="Member 2 Photo">
+
+            </article>
+
+            <article>
+                <h2>Chris McCune</h2>
+                <p>Plant expert.<br />
+                    Knows everything about plants.
+                </p>
+                <img src="images/chris (1).jpg" alt="Member 2 Photo">
+
+            </article>
+        </section>
+
+    </main>
+    <!-- footer section start -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="home.html"><img src="images/logo.jpg" alt="logo" class="logo-footer"></a>
+                <div class="footer-about">
+                    <p>Company was established in 2024,
+                        we are determined in providing the best possible for our customers</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="useful-link">
+                    <h2>Useful Links</h2>
+
+                    <ul class="use-links">
+                        <li><a href="home.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="social-links">
+                    <h2>Follow Us</h2>
+
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="address">
+                    <h2>Address</h2>
+
+                    <ul class="address-links">
+                        <li class="address1"><i class="fa-solid fa-location-dot"></i> Komga, Amathole district, 4950
+                        </li>
+                        <li><a href="047 569 1226"><i class="fa-solid fa-phone"></i> 047 569 1226</a></li>
+                        <li><a href="mailto: cultivate@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                cultivate@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- footer copy right section start -->
+
+    <div class="copyright">
+        <p>&copy; 2024 Cultivate. All rights reserved.</p>
+    </div>
+
+
+    <!-- footer copy right section end -->
+
+</body>
+
+</html>

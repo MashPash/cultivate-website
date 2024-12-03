@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Personality Quiz - Cultivate</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Find what plant works for you!</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="quiz.html">Plant Personality Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html" style="float: right;">Login</a>
+    </nav>
+
+    <!-- Sidebar for smaller screens -->
+    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" onclick="closeSidebar()">Close &times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!--Javascript in future for sidebar responsiveness-->
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").classList.add("sidebar-active");
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").classList.remove("sidebar-active");
+        }
+    </script>
+
+    <div id="intro-section" class="intro-section">
+        <img src="images/sunflower-34.png" alt="Plant Quiz" class="intro-image"> <br>
+        <button id="start-quiz-btn" class="start-quiz-btn">Start the Quiz</button>
+    </div>
+
+    <div id="quiz-section" class="quiz-section" style="display: none;">
+        <h1>Find Your Plant Personality!</h1>
+        <div id="quiz">
+            <div class="question">
+                <h3>1. How much time can you dedicate to your plant?</h3>
+                <input type="radio" name="question1" value="cactus" id="q1a"> <label id="labelp" for="q1a">Minimal
+                    care</label><br>
+                <input type="radio" name="question1" value="aloe" id="q1b"> <label id="labelp" for="q1b">Moderate
+                    care</label><br>
+                <input type="radio" name="question1" value="fern" id="q1c"> <label id="labelp" for="q1c">Lots of
+                    care</label><br>
+            </div>
+
+            <div class="question">
+                <h3>2. What type of environment do you have for your plant?</h3>
+                <input type="radio" name="question2" value="orchid" id="q2a"> <label id="labelp" for="q2a">Bright and
+                    dry</label><br>
+                <input type="radio" name="question2" value="aloe" id="q2b"> <label id="labelp" for="q2b">Indirect
+                    sunlight</label><br>
+                <input type="radio" name="question2" value="fern" id="q2c"> <label id="labelp" for="q2c">Low light
+                    conditions</label><br>
+            </div>
+
+            <div class="question">
+                <h3>3. What kind of plant style do you prefer?</h3>
+                <input type="radio" name="question3" value="snakeplant" id="q3a"> <label id="labelp" for="q3a">Compact
+                    and
+                    simple</label><br>
+                <input type="radio" name="question3" value="orchid" id="q3b"> <label id="labelp" for="q3b">Beautiful and
+                    exotic</label><br>
+                <input type="radio" name="question3" value="monstera" id="q3c"> <label id="labelp" for="q3c">Bold and
+                    lush</label><br>
+            </div>
+
+            <div class="question">
+                <h3>4. What size of plant do you want?</h3>
+                <input type="radio" name="question4" value="aloe" id="q4a"> <label id="labelp" for="q4a">Small and
+                    compact</label><br>
+                <input type="radio" name="question4" value="snakeplant" id="q4b"> <label id="labelp" for="q4b">Medium
+                    and
+                    leafy</label><br>
+                <input type="radio" name="question4" value="bambooplant" id="q4c"> <label id="labelp" for="q4c">Large
+                    and
+                    bold</label><br>
+            </div>
+            <div class="question">
+                <h3>5. How often can you water your plant?</h3>
+                <input type="radio" name="question5" value="cactus" id="q5a"> <label id="labelp" for="q5a">Once a week
+                    or
+                    less</label><br>
+                <input type="radio" name="question5" value="orchid" id="q5b"> <label id="labelp" for="q5b">A few times a
+                    week</label><br>
+                <input type="radio" name="question5" value="fern" id="q5c"> <label id="labelp" for="q5c">Daily or
+                    regularly</label><br>
+            </div>
+
+            <div class="question">
+                <h3>6. What is the temperature like where your plant will grow?</h3>
+                <input type="radio" name="question6" value="cactus" id="q6a"> <label id="labelp" for="q6a">Hot and
+                    dry</label><br>
+                <input type="radio" name="question6" value="orchid" id="q6b"> <label id="labelp" for="q6b">Mild and
+                    warm</label><br>
+                <input type="radio" name="question6" value="fern" id="q6c"> <label id="labelp" for="q6c">Cool and
+                    humid</label><br>
+            </div>
+
+            <div class="question">
+                <h3>7. Do you want a flowering plant?</h3>
+                <input type="radio" name="question7" value="orchid" id="q7a"> <label id="labelp"
+                    for="q7a">Yes</label><br>
+                <input type="radio" name="question7" value="snakeplant" id="q7b"> <label id="labelp"
+                    for="q7b">Maybe</label><br>
+                <input type="radio" name="question7" value="monstera" id="q7c"> <label id="labelp"
+                    for="q7c">No</label><br>
+            </div>
+
+            <div class="question">
+                <h3>8. How much space do you have for the plant?</h3>
+                <input type="radio" name="question8" value="aloe" id="q8a"> <label id="labelp" for="q8a">Small
+                    space</label><br>
+                <input type="radio" name="question8" value="snakeplant" id="q8b"> <label id="labelp" for="q8b">Medium
+                    space</label><br>
+                <input type="radio" name="question8" value="bambooplant" id="q8c"> <label id="labelp" for="q8c">Large
+                    space</label><br>
+            </div>
+
+            <div class="question">
+                <h3>9. Do you prefer a plant that improves air quality?</h3>
+                <input type="radio" name="question9" value="snakeplant" id="q9a"> <label id="labelp"
+                    for="q9a">Yes</label><br>
+                <input type="radio" name="question9" value="bambooplant" id="q9b"> <label id="labelp"
+                    for="q9b">Maybe</label><br>
+                <input type="radio" name="question9" value="cactus" id="q9c"> <label id="labelp"
+                    for="q9c">No</label><br>
+            </div>
+
+            <!-- Add more questions as needed -->
+            <button id="quiz-submit" onclick="getResult()">Submit</button>
+        </div>
+
+        <div id="result-section" class="result-section" style="display: none;">
+            <div class="result-container">
+                <img id="result-plant-img" src="" alt="Your Plant" class="result-plant-img">
+                <h2 id="result-plant-name"></h2>
+                <p id="result-plant-description"></p>
+            </div>
+            <button id="shop-btn" class="shop-btn">Go to Shop</button>
+        </div>
+    </div>
+
+
+    <br>
+
+    <!-- footer section start -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="home.html"><img src="images/logo.jpg" alt="logo" class="logo-footer"></a>
+                <div class="footer-about">
+                    <p>Company was established in 2024,
+                        we are determined in providing the best possible for our customers</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="useful-link">
+                    <h2>Useful Links</h2>
+
+                    <ul class="use-links">
+                        <li><a href="home.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="social-links">
+                    <h2>Follow Us</h2>
+
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="address">
+                    <h2>Address</h2>
+
+                    <ul class="address-links">
+                        <li class="address1"><i class="fa-solid fa-location-dot"></i> Komga, Amathole district, 4950
+                        </li>
+                        <li><a href="047 569 1226"><i class="fa-solid fa-phone"></i> 047 569 1226</a></li>
+                        <li><a href="mailto: cultivate@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                cultivate@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- footer copy right section start -->
+
+    <div class="copyright">
+        <p>&copy; 2024 Cultivate. All rights reserved.</p>
+    </div>
+
+
+    <!-- footer copy right section end -->
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+
+        <button class="fa fa-info-circle" style="float: right; margin-right: 50px;" onclick="getBrowserInfo()"
+            aria-placeholder="Get Browser Info"></button>
+
+
+
+        <div class="grid_12">
+            <h1>
+                <a href="home.html">
+                    <img src="images/logo.jpg" alt="Cultivate logo" height="100px" width="100px" style="float:left">
+                </a>
+            </h1>
+
+        </div>
+
+
+        <h1>Search Results</h1>
+
+
+
+    </header>
+
+
+
+    <!--NavBar section begin-->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <!-- Shop dropdown -->
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Shop</a>
+            <div class="dropdown-content" id="shopDropdown">
+                <a href="shop.html#outdoor-plants">Outdoor Plants</a>
+                <a href="shop.html#indoor-plants">Indoor Plants</a>
+                <a href="shop.html#succulent-plants">Succulents</a>
+                <a href="shop.html#fruit-plants">Fruit Trees & Bushes</a>
+                <a href="shop.html#indigenous-plants">Indigenous Plants</a>
+                <a href="shop.html#herb-plants">Herb Plants</a>
+                <a href="shop.html#vegetable-plants">Vegetable Plants</a>
+                <a href="shop.html#garden-pots">Garden Pots</a>
+                <a href="shop.html#garden-shed">Garden Shed Must-Haves</a>
+            </div>
+        </div>
+
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html" style="margin-left: 50px;">Login</a>
+    </nav>
+
+    <!-- Sidebar for smaller screens -->
+    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" onclick="closeSidebar()">Close &times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <!-- Dropdown for Shop -->
+        <a href="javascript:void(0)" onclick="toggleShopDropdown()">Shop</a>
+        <div id="sidebar_shopDropdown" class="sidebar-dropdown-content">
+            <!-- Links to sections in shop.html -->
+            <a href="shop.html#outdoor-plants">Outdoor Plants</a>
+            <a href="shop.html#indoor-plants">Indoor Plants</a>
+            <a href="shop.html#succulents">Succulents</a>
+            <a href="shop.html#fruit-trees">Fruit Trees & Bushes</a>
+            <a href="shop.html#indigenous-plants">Indigenous Plants</a>
+            <a href="shop.html#water-plants">Water/Pond Plants</a>
+            <a href="shop.html#vegetable-plants">Vegetable Plants</a>
+            <a href="shop.html#garden-pots">Garden Pots</a>
+            <a href="shop.html#garden-shed">Garden Shed Must-Haves</a>
+        </div>
+        <a href="quiz.html">Green Thumb Quiz</a>
+        <a href="advice.html">Gardening Tips</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!--NavBar section End-->
+
+    <!--Search Bar Section-->
+
+    <br>
+    <br>
+
+    <div id="search-results">
+    </div>
+
+
+
+
+
+
+    <!-- footer section start -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="home.html"><img src="images/logo.jpg" alt="logo" class="logo-footer"></a>
+                <div class="footer-about">
+                    <p>Company was established in 2024,
+                        we are determined in providing the best possible for our customers</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="useful-link">
+                    <h2>Useful Links</h2>
+
+                    <ul class="use-links">
+                        <li><a href="home.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="social-links">
+                    <h2>Follow Us</h2>
+
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <div class="address">
+                    <h2>Address</h2>
+
+                    <ul class="address-links">
+                        <li class="address1"><i class="fa-solid fa-location-dot"></i> Komga, Amathole district, 4950
+                        </li>
+                        <li><a href="047 569 1226"><i class="fa-solid fa-phone"></i> 047 569 1226</a></li>
+                        <li><a href="mailto: cultivate@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                cultivate@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- footer copy right section start -->
+
+    <div class="copyright">
+        <p>&copy; 2024 Cultivate. All rights reserved.</p>
+    </div>
+
+
+    <!-- footer copy right section end -->
+    <script src="js/search.js"></script>
+</body>
+
+</html>
